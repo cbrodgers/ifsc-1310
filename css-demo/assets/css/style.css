@@ -16,15 +16,38 @@ html {
   margin:40px auto;
   max-width:900px;
 }
+
+.img-right{
+  float:right;
+  padding:5px;
+  border:1px solid #c0c0c0;
+  margin: 10px 0px 10px 20px;
+}
+
+.img-left{
+  float:left;
+  padding:5px;
+  border:1px solid #c0c0c0;
+  margin: 10px 20px 10px 0;
+}
+
+.img-center{
+  display:block;
+  padding:5px;
+  border:1px solid #c0c0c0;
+  margin:20px auto;
+}
+
 /* --- Responsive Images ---*/
 img{
-  max-width:100px;
+  max-width:100%;
   height:auto;
 }
 /*--- Global Styles ---*/
 body{ 
     font-family: 'Raleway', sans-serif;
     margin:0;
+    line-height:1.5;
 }
 
 header.primary{
@@ -36,16 +59,19 @@ header.primary{
     padding-top:40px;
     padding-bottom:20px;
     padding-left:40px;
-    
+    padding-right:40px;
     /* Shorthand Top/Bottom, Left/Right */
-  padding: 20px 40px;
+    padding: 20px 40px;
   
     /* -- Short Form T, R,B,L--*/
     padding: 40px 40px 20px 40px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 header.primary h1{
   font-size:3.2rem;
+  margin:20px 0;
 }
 
 header.primary h1 a{
@@ -61,7 +87,7 @@ header,primary h2{
 header.primary nav{
   width:80vw;
   margin:20px auto;
-  max-width:900px;
+  max-width:1000px;
 }
 
 header.primary nav ul{
@@ -107,12 +133,17 @@ header.primary nav ul li a:hover, header.primary nav ul li a:active{
   display:flex;
   flex-direction:row;
   justify-content:space-between;
+  border-bottom:1px solid #c0c0c0;
+  padding-bottom:2.6rem;
 }
 
 #content article.post{
   width:30%;
-  box-shadow:0 40px 8px rgba(0,0,0,.4);
+  box-shadow:0 4px 8px rgba(0,0,0,.4);
   padding:.7em;
+  transition:.5s;
+  border-radius:10px;
+  font-size:.9rem;
 }
 
 #content article.post:hover{
@@ -134,20 +165,143 @@ header.primary nav ul li a:hover, header.primary nav ul li a:active{
 }
 
 .post a:link .post a:visited{
-  color:#3b638b;
+  color:#AD6807;
 }
 
+/* -- AAtributeSelector -- */
+aside[role="complementary"]{
+  background-color:#C48702;
+  color:#ffffff;
+  padding:2.5rem;
+}
 
+aside .container{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
 
+aside article.widget{
+  width: 40%;
+}
 
+aside a:link, aside a:visited{
+  color:#fff;
+  display:block;
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+}
 
+aside a:link, aside a:visited{
+  text-decoration:none;
+}
 
+aside article footer{
+  display:none;
+}
 
+footer#colophon{
+  background-color: #8F4200;
+}
 
+#colophon h6{
+  padding:20px;
+  margin:0;
+  color:#fff;
+  text-align:center;
+  font-size:.8rem;
+  text-transform:uppercase;
+}
 
+#additional-elements h2{
+  color:#AD6807;
+  border-bottom: 3px double #c0c0c0;
+}
 
+#additional-elements a:link, #additional-elements a:visited{
+  color:#AD6807;
+}
 
-@media screen and (max-width:680px){
+#additional-elements a:visited, #additional-elements a:active{
+  text-decoration:none;
+}
+
+#additional-elements h3{
+  border-left: 5px solid #AD6807;
+  padding:10px 10px;
+}
+
+table{
+  width:100%;
+  border:1px solid #c0c0c0;
+  border-collapse:collapse;
+}
+
+table caption{
+  color:#AD6807;
+  padding:10px;
+  font-weight:bold;
+  font-size:1.4rem;
+}
+
+table tr:nth-child(even){
+  background: rgba(0,0,0,.1);
+}
+
+table th{
+  background-color:black;
+  color:#ffffff;
+  width:33%;
+  padding:10px;
+}
+
+table td{
+  border:1px solid #c0c0c0;
+  padding:5px;
+}
+
+#additional-elements ol{
+  list-style-type:upper-roman;
+}
+
+#additional-elements ul ul{
+  list-style-type:square;
+}
+
+#additional-elements dl{
+  line-height:1.5;
+}
+
+#additional-elements dt{
+  font-weight:bold;
+  font-size:1.2rem;
+}
+
+#additional-elements dd{
+  margin:0;
+}
+
+dd + dt{
+  margin-top:1.4rem;
+}
+
+#additional-elements blockquote{
+  background: rgba(0,0,0,.15);
+  padding: 40px 60px;
+  border:5px double grey;
+  border-radius:16px;
+  font-size:1.2em;
+}
+
+#additional-elements cite{
+  display:block;
+  font-size:.6em;
+  text-align:right;
+  margin-top:1.5rem;
+  font-weight:bold;
+}
+
+@media screen and (max-width:690px){
   
   header.primary nav ul {
     flex-direction:column;
