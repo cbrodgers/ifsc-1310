@@ -1,0 +1,212 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+.container {
+  width: 80vw;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.img-right {
+  float: right;
+  margin: 10px 0 10px 20px;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+.img-left {
+  float: left;
+  margin: 10px 20px 10px 0;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+.img-center {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+
+
+
+.primary{
+    background:url(../img/spacex-logo.png) no-repeat;
+    background-position: center 10px;
+    padding: 40px 20px 20px 20px;
+    text-shadow: 1px 1px #000;
+    text-align:center;
+    
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+body{ 
+    font-family: 'Raleway', sans-serif;
+    margin:0;
+    line-height:1.5;
+    background:linear-gradient(to top, #BBBDC0, white);
+    font-size:1.2rem;
+}
+
+header.primary h1{
+    font-size:3.2rem;
+  margin:50px auto;
+  padding:180px 0px;
+  
+}
+
+header.primary h1 a {
+  text-indent:100%;
+  white-space:nowrap;
+}
+header.primary h2{
+    font-size:1.8rem;
+  margin:10px auto 20px;
+}
+
+header.primary nav li {
+  list-style-type: none;
+  padding: 0;
+  width: 20%;
+}
+
+header.primary nav ul{
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  padding:0;
+  margin:20px auto;
+  max-width: 1000px;
+}
+
+header.primary nav ul li{
+  list-style-type:none;
+  padding:10px;
+}
+
+header.primary nav ul li a:link, header.primary nav ul li a:visited{
+  color:white;
+  text-decoration:none;
+  font-size:1.5rem;
+  background-color:#000000;
+  background-color:rgba(0,0,0,.4);
+  padding: 8px 16px;
+  border-radius:20px;
+  transition:.8s;
+} 
+
+header.primary nav ul li a:hover, header.primary nav ul li a:active{
+  background-color:rgba(0,0,0,.8);
+}
+
+#content{
+ padding:40px 60px 20px 60px;
+ text-align:center;
+ border-bottom:1px solid #c0c0c0;
+  padding-bottom:2.6rem;
+}
+
+#configs{
+    padding:40px 60px 20px 60px;
+ text-align:center;
+
+}
+
+#table{
+  text-align:center;
+}
+table{
+  width:100%;
+  border:1px solid #c0c0c0;
+  border-collapse:collapse;
+}
+
+table caption{
+  color:#AD6807;
+  padding:10px;
+  font-weight:bold;
+  font-size:1.6rem;
+}
+
+table tr:nth-child(even){
+  background: white;
+}
+
+table th{
+  background-color:black;
+  color:#ffffff;
+  width:33%;
+  padding:10px;
+}
+
+table td{
+  border:1px solid #0a0a0a;
+  padding:5px;
+  text-align:center;
+  font-size:1.3rem;
+}
+
+details {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1em 1em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: 1em;
+}
+
+details[open] {
+    padding: 1em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid white;
+    margin-bottom: .5em;
+}
+
+
+#about{
+    border-top:1px solid #c0c0c0;
+  padding-bottom:2.6rem;
+    text-align:center;
+    padding:20px 40px 20px 40px;
+}
+
+
+#colophon{
+    text-align:center;
+    font-size:1.2rem;
+}
+
+#colophon a:link,
+#colophons a:visited {
+  color: #fff;
+}
+
+@media screen and (max-width:690px){
+  
+  header.primary nav ul {
+    flex-direction:column;
+    max-width:400px;
+    margin:0 auto;
+  }
+  
+  header.primary nav a{
+    display:block;
+  }
+}

@@ -1,12 +1,12 @@
 /*--- CSS Style Sheet ---*/
 /*--- Box sizing ---*/
 
-html {
+html{
     box-sizing: border-box;
 }
 *,
 *:before,
-*:after {
+*:after{
     box-sizing: inherit;
 }
 
@@ -79,7 +79,7 @@ header.primary h1 a{
   color:#ffffff;
 }
 
-header,primary h2{
+header.primary h2{
   font-size:2rem;
   margin:20px auto 40px;
 }
